@@ -1,0 +1,141 @@
+@import "./node_modules/react-spritz/build/main.css";
+
+.container .highlight {
+    color: yellow;
+}
+
+
+.container {
+    max-width: 30em;
+    height: 2em;
+    padding: 1.3em 0;
+    font-size: 3em;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 900;
+}
+
+
+
+H3 em {
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0.02em;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+H1 em {
+  color: yellow;
+  font-style: normal;
+}
+
+
+.source--root {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 10px;
+  height: 0;
+  overflow: visible;
+}
+
+.layout-image > div {
+  position: relative;
+}
+
+
+
+
+.layout-image h1,
+.layout-image h2,
+.layout-image h3 {
+  color: #0a0045;
+}
+
+.layout-image > div {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.layout-image > div img {
+  width: 100%;
+  height: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+
+}
+
+
+
+
+
+/*  font demo */
+
+@font-face {
+  font-family: 'gilbert';
+  src: url('http://127.0.0.1:8080/Gilbert-Color.otf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+.gilbert {
+  font-family: 'gilbert';
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+
+
+@font-face {
+  font-family: 'chartwell';
+  src: url('http://127.0.0.1:8080/ChartwellPies.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+.chartwell {
+  font-family: 'chartwell';
+  font-size: 5rem;
+}
+.chartwell-salt {
+  font-feature-settings: "salt";
+}
+
+
+/*
+.chartwell::first-letter   {
+  color: red;
+
+}
+ */
+
+
+
+/* FF Meta Variable Demo Font */
+@font-face {
+  font-family: 'FF Meta VF';
+  src: url('https://variablefonts.monotype.com/MetaVariableDemo-Set.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal italic;
+  font-weight: 100 900;
+}
+@keyframes animate-fit {
+ from {
+   font-variation-settings: "wght" 100;
+
+ }
+ to {
+   font-variation-settings: "wght" 900;
+ }
+}
+.anim {
+  font-size: 6rem;
+  font-family: 'FF Meta VF';
+ animation-name: animate-fit;
+ animation-direction: alternate;
+ animation-duration: 3s;
+ animation-iteration-count: infinite;
+ animation-timing-function: ease-in-out;
+}

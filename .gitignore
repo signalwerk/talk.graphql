@@ -1,2 +1,3 @@
 ci/.ssh/id_rsa
 ci/.ssh/secret.key
+/node_modules

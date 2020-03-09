@@ -1,0 +1,217 @@
+import { Head, Image } from 'mdx-deck'
+import Start from './src/Components/start'
+import Source from './src/Components/source'
+import Video from './src/Components/video'
+import Speedread from './src/Components/speedread'
+export theme from './src/theme'
+import Invert from './src/layouts/Invert'
+import ImgLayout from './src/layouts/image'
+
+
+
+import 'style-loader!css-loader!./styles.css'
+
+
+<Head>
+  <title>GraphQL</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900" rel="stylesheet" />
+</Head>
+
+
+# start
+---
+export default Start
+
+
+<Video
+  loop={true}
+  src="https://cdn.rawgit.com/signalwerk/talk.dock18.2018/add5d516/intro/intro.mp4"
+/>
+
+---
+
+# GraphQL
+### Liip Lab 10.3.2020
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+#### Stefan Huber
+---
+## What?
+---
+
+export default ImgLayout
+
+## Traditional (coupled)
+
+![](./img/traditional.svg)
+---
+
+export default ImgLayout
+
+## Progressively Decoupled
+
+
+![](./img/progressive-decouple.svg)
+
+---
+
+
+
+export default ImgLayout
+
+## Decoupled
+
+
+![](./img/decouple.svg)
+
+
+---
+
+export default ImgLayout
+
+## Detail traditional
+
+![](./img/traditional-html.svg)
+
+---
+
+export default ImgLayout
+
+## Detail Decoupled
+
+
+![](./img/graphql.svg)
+---
+## Why?
+
+---
+## Advantage
+* Standard FE-Workflow (no Drupal Knowledge)
+* Transitions betwen Pages
+* Ideal for Pages with high interactions
+* Ideal for Pages with State
+---
+## Disadvantage
+
+* Additional Server
+* Many advantages to get feature parity with current Drupal Workflow
+
+---
+
+## When?
+
+* Pages that mostly render and don't write
+* Drupal Commerce is probably not the right thing now...
+---
+
+## What do we have?
+
+* Drupal 8 Backend with GraphQL-Endpoint
+* Nuxt-App (Vue) with some example Components
+
+---
+## Frontend
+
+* Nuxt
+* Apollo Client
+* PostCSS
+
+---
+## Nuxt
+
+* Default Nuxt setup
+
+---
+## Apollo Client
+
+* Apollo Client (no Nuxt-Apollo)
+* Preconfigured for fragments and everything...
+---
+## Component
+
+* Fragment (.gql)
+* Template/Style (.vue)
+* Style (.css)
+
+---
+## CSS
+
+* SCSS is powerfull but is it maintainable?
+* Is CSS in JS the right thing?
+* Is Helper-Classes the right thing?
+---
+## SCSS
+
+```scss
+@mixin very-complex-mixin {
+  ...
+}
+
+test {
+  @include very-complex-mixin;
+}
+```
+---
+## Styled Components
+
+```js
+const StyledTitle = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+```
+---
+## Tailwind
+
+```html
+<div class="bg-white rounded-lg p-6">
+</div>
+
+vs
+
+<div class="card card--active">
+</div>
+```
+---
+## PostCSS
+
+HTML
+```html
+<div class="card card--active">
+</div>
+```
+---
+## PostCSS
+
+CSS
+
+```css
+@import '~/components/_root/box.css';
+@import '~/components/_root/colors.css';
+@import '~/components/card/card-var.css';
+
+.card {
+  border-radius: $box-radius;
+  height: $card-height;
+}
+
+.card--active {
+  background-color: $colors--active;
+}
+```
+
+
+---
+# Merci
+---
+
+
+
+## exit 0;
