@@ -27,9 +27,158 @@ export default Start
   src="https://cdn.rawgit.com/signalwerk/talk.dock18.2018/add5d516/intro/intro.mp4"
 />
 
+
 ---
 
-# GraphQL
+# Drupal → GraphQL → Vue
+### Liip Lab 10.3.2020
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+#### Stefan Huber
+---
+## first things first
+
+* Join #d8-headless-challenge
+* Clone and Setup [gitlab.liip.ch/bazinga/shkb.next](https://gitlab.liip.ch/bazinga/shkb.next)
+
+---
+## Setup
+
+* Backend: `./Readme.md`
+* Frontend: `./frontend/Readme.md`
+
+---
+## Goal
+
+* Learn and have fun
+* Fully decoupled Vue-App
+* Data from Drupal via GraphQL
+* Clone of [shkb.ch/179-kbplus-paket](https://www.shkb.ch/179-kbplus-paket)
+
+---
+
+## What do we have?
+
+* Drupal 8 Backend with GraphQL-Endpoint
+* Nuxt-App (Vue) with some example components
+
+---
+
+## Today
+
+* Build a Component & Fragment
+* Pick a task → see also [Wiki](https://wiki.liip.ch/pages/viewpage.action?pageId=622993617)
+
+---
+## Frontend
+
+* Nuxt
+* Apollo Client
+* PostCSS
+
+---
+## Nuxt
+
+* Default Nuxt setup
+
+---
+## Apollo Client
+
+* Fetches data from Server via GraphQL
+* Apollo Client (no Nuxt-Apollo)
+* Preconfigured for fragments and everything...
+---
+## Component
+
+* Query/Fragment (.gql)
+* Template/Style (.vue)
+* Style (.css)
+---
+## Let's have a look
+
+---
+## CSS
+
+* SCSS is powerfull but is it maintainable?
+* Is CSS in JS the right thing?
+* Is Helper-Classes the right thing?
+---
+## SCSS
+
+```scss
+@mixin very-complex-mixin {
+  ...
+}
+
+test {
+  @include very-complex-mixin;
+}
+```
+---
+## Styled Components
+
+```js
+const StyledTitle = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+```
+---
+## Tailwind
+
+```html
+<div class="bg-white rounded-lg p-6">
+</div>
+
+vs
+
+<div class="card card--active">
+</div>
+```
+---
+## PostCSS
+
+HTML
+```html
+<div class="card card--active">
+</div>
+```
+---
+## PostCSS
+
+CSS
+
+```css
+@import '~/components/_root/box.css';
+@import '~/components/_root/colors.css';
+@import '~/components/card/card-var.css';
+
+.card {
+  border-radius: $box-radius;
+  height: $card-height;
+}
+
+.card--active {
+  background-color: $colors--active;
+}
+```
+
+
+---
+# Merci
+---
+
+
+---
+
+# GraphQL for PO
 ### Liip Lab 10.3.2020
 
 <br/>
@@ -107,108 +256,6 @@ export default ImgLayout
 
 * Pages that mostly render and don't write
 * Drupal Commerce is probably not the right thing to start...
----
-
-## What do we have?
-
-* Drupal 8 Backend with GraphQL-Endpoint
-* Nuxt-App (Vue) with some example components
-
----
-## Frontend
-
-* Nuxt
-* Apollo Client
-* PostCSS
-
----
-## Nuxt
-
-* Default Nuxt setup
-
----
-## Apollo Client
-
-* Apollo Client (no Nuxt-Apollo)
-* Preconfigured for fragments and everything...
----
-## Component
-
-* Fragment (.gql)
-* Template/Style (.vue)
-* Style (.css)
-
----
-## CSS
-
-* SCSS is powerfull but is it maintainable?
-* Is CSS in JS the right thing?
-* Is Helper-Classes the right thing?
----
-## SCSS
-
-```scss
-@mixin very-complex-mixin {
-  ...
-}
-
-test {
-  @include very-complex-mixin;
-}
-```
----
-## Styled Components
-
-```js
-const StyledTitle = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
-```
----
-## Tailwind
-
-```html
-<div class="bg-white rounded-lg p-6">
-</div>
-
-vs
-
-<div class="card card--active">
-</div>
-```
----
-## PostCSS
-
-HTML
-```html
-<div class="card card--active">
-</div>
-```
----
-## PostCSS
-
-CSS
-
-```css
-@import '~/components/_root/box.css';
-@import '~/components/_root/colors.css';
-@import '~/components/card/card-var.css';
-
-.card {
-  border-radius: $box-radius;
-  height: $card-height;
-}
-
-.card--active {
-  background-color: $colors--active;
-}
-```
-
-
----
-# Merci
 ---
 
 
